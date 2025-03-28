@@ -1,0 +1,15 @@
+# custom files and extentions
+.python-version
+data/
+*.csv
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
