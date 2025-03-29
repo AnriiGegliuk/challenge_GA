@@ -12,6 +12,11 @@ app = FastAPI(title="Titanic API")
 model_lgbm = joblib.load("models/model.joblib")
 
 
+@app.get("/")
+def checking_status():
+        return {"message": "OK", "docs": "API documentation inside /docs"}
+
+
 class PassengerData(BaseModel): # using pydantic to validate input types of data according to https://pydantic-docs.readthedocs.io/en/stable/
     Pclass: int
     Sex: str
